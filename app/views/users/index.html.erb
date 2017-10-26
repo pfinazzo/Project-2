@@ -1,0 +1,7 @@
+<h1>Users</h1>
+
+<ul>
+<% @user.each do |u| %>
+<li><%="  #{u.name} " %><%= "  #{u.email} " %><%= " Created on #{u.created_at} " %></li>
+<% end %>
+</ul>
