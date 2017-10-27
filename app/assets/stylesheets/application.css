@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ .center {
+  text-align: center !important;  
+  color: blue;
+  float: center;
+  margin: 0 auto;
+}
+
+#formbox {
+  max-width: 300px;
+  float: center;
+  margin: 0 auto;
+}
+

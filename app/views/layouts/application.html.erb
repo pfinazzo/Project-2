@@ -3,12 +3,17 @@
   <head>
     <title>MusicMate</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.min.js"></script>
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="center">
 <p>
   <% if current_user %>
     Welcome, <%= current_user.name %>
@@ -21,5 +26,6 @@
   <% end %>
 </p>
     <%= yield %>
+    </div>
   </body>
 </html>
