@@ -28,6 +28,16 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
+  <div class="field">
+    </br>
+    <div class="label" >Teacher</div>
+    <%= radio_button_tag(:teacher, "true") %>
+    </br>
+    </br>
+    <div class="label" >Student</div>
+    <%= radio_button_tag(:teacher, "false") %>
+  </div>
+  
   </br>
   <div class="actions" class="ui submit button"><%= f.submit %></div>
 <% end %>
