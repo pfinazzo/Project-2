@@ -1,9 +1,7 @@
 <h1>Users</h1>
+<% current_user == true %>
 
 <ul>
-<% if current_user %>
-<li><%= " #{current_user.name}"%><%=" #{current_user.email}"%>
-</li>
 <% @user.each do |u| %>
 <% unless current_user.nil?%>
 <% unless u.email == current_user.email%>
@@ -13,5 +11,4 @@
 <% end %>
 <% end %>
 </li>
-<% end %>
 </ul>

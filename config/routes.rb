@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  root 'users#index'
-  resources :users, only: [:new, :create, :index, :destroy]
-  resources :sessions, only: [:new, :create, :destroy]
-  # Create a better looking URL for logging in
+  root 'sessions#new'
   get '/login', to: 'sessions#new'
+  get 'sessions/new', to: 'users#index'
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create, :index, :destroy]
+  
+  
+
+  # Create a better looking URL for logging in
+  
+
+  
+  
 end

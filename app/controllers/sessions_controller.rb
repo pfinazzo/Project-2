@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   
     def new
       # Nothing to do here other than render new.html.erb
+        current_user == true
     end
   
     def create

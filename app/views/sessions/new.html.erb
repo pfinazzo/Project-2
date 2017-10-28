@@ -1,3 +1,5 @@
+<div class="ui mini form">
+<div id="formbox">
 <h1>Log In</h1>
 <p id="alert"><%= alert %></p>
 <%= form_tag sessions_path do %>
@@ -9,5 +11,7 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
+  <button class="actions"><%= link_to "Log In", users_path %></button>
 <% end %>
+</div>
+</div>
