@@ -1,13 +1,15 @@
 <h1>Users</h1>
 
 <ul>
+<% if current_user %>
+<li><%= " #{current_user.name}"%><%=" #{current_user.email}"%>
+</li>
 <% @user.each do |u| %>
 <% unless current_user.nil?%>
 <% unless u.email == current_user.email%>
-<li><%="  #{current_user.name} " %><%= "  #{current_user.email} " %>
-</li>
 <li><%="  #{u.name} " %><%= "  #{u.email} " %> <% if u.teacher == true %> <% return %> <%= "Teacher" %> <% else %><%= "Student"%> <% end %>
 <%= link_to "Delete", user_path(u), :method => :delete %>
+<% end %>
 <% end %>
 <% end %>
 </li>
