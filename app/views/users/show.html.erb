@@ -4,4 +4,8 @@
 <% else %>
 <p>Student</p>
 <% end %>
-
+<%= image_tag @user.image, class: "pic" %>
+<br>
+<%= @user.content %>
+<br>
+<%= "Email me at #{@user.email} "%>

@@ -28,6 +28,14 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
+     <div class="field">
+    <%= f.label :image%>
+    <%= f.file_field :image %>
+  </div>
+     <div class="field">
+    <%= f.label :content%>
+    <%= f.text_field :content %>
+  </div>
   <div class="field">
     </br>
     <%= f.radio_button(:teacher, "true") %>
