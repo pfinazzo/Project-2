@@ -30,15 +30,13 @@
   </div>
   <div class="field">
     </br>
-    <h3> I am a...</h3>
-    <div class="label" >Teacher</div>
-    <%= radio_button_tag(:teacher, "true") %>
+    <%= f.radio_button(:teacher, "true") %>
+    <%= f.label :teacher, "Teacher" %>
+    <%= f.radio_button(:teacher, "false") %>
+    <%= f.label :teacher, "Student"%>
+  
     </br>
-    </br>
-    <div class="label" >Student</div>
-    <%= radio_button_tag(:teacher, "false") %>
-    </br>
-  </br>
+  
   <div class="actions" class="ui submit button"><%= f.submit %></div>
 <% end %>
 </div>
