@@ -8,9 +8,9 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new
   end 
 
-  def show 
-    @lesson = Lesson.find_by user_id:
-  end
+  # def show 
+  #   @lesson = Lesso
+  # end
 
 end
 

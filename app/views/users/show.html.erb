@@ -9,3 +9,15 @@
 <%= @user.content %>
 <br>
 <%= "Email me at #{@user.email} "%>
+<br>
+
+<% if @user.teacher == true then %>
+<%= link_to "Booked Lessons!", lessons_path %>
+<% else %>
+<%= link_to "Available lessons!", lessons_path %>
+<% end %>
+
+
+
+
+

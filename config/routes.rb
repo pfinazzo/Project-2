@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'sessions#home'
   resources :sessions, only: [:new, :create, :destroy]
+  resources :lessons
   get '/login', to: 'sessions#new'
   get 'sessions/new', to: 'users#show'
   resources :users, only: [:new, :create]

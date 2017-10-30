@@ -7,5 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Lessons.destroy_all
+
+lessons = Lesson.create([{ instrument: 'guitar'}, { time: '3:00 PM'}, {date: '10/02/1994'}, {location: 'panama city'}, {content: "I love cookies"}])
+
 
 
