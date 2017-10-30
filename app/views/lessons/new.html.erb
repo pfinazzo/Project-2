@@ -1,0 +1,39 @@
+<div class="center"><h1>Sign Up</h1>
+<div class="ui mini form">
+<div id="formbox">
+<%= form_for @lesson do |l| %>
+  <% if @lesson.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @lesson.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= l.label :instrument %>
+    <%= l.text_field :instrument %>
+  </div>
+  <div class="field">
+    <%= l.label :time %>
+    <%= l.text_field :time %>
+  </div>
+  <div class="field">
+    <%= l.label :date %>
+    <%= l.text_field :date %>
+  </div>
+  <div class="field">
+    <%= l.label :location %>
+    <%= l.text_field :location %>
+  </div>
+    <div class="field">
+    <%= l.label :content %>
+    <%= l.text_field :content %>
+  </div>
+  </br>
+  <div class="actions" class="ui submit button"><%= f.submit %></div>
+<% end %>
+</div>
+</div>

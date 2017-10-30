@@ -2,7 +2,10 @@ class SessionsController < ApplicationController
   
     def new
       # Nothing to do here other than render new.html.erb
-        current_user == true
+    end
+
+    def home
+
     end
   
     def create
@@ -15,6 +18,8 @@ class SessionsController < ApplicationController
         # Successful log in!
         session[:user_id] = user.id
         # notice: is a special flash[:notice] accessor
+
+        # TODO: if user.teacher, then redirect to lessons index
         redirect_to root_path, notice: 'Logged in!'
       else
         # flash.now is used for messaging
@@ -26,7 +31,7 @@ class SessionsController < ApplicationController
 
     def destroy
       session[:user_id] = nil
-      redirect_to root_path, notice: "Logged out!"
+      redirect_to root_path, 'notice': "Logged out!"
     end
   
   end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  def index
-    @user = User.all 
+  def show
+    @user = current_user 
   end 
 
   def new
@@ -19,10 +19,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy 
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to root_path
+  def edit
+    @user = current_user 
+  end
+
+  def update
+
   end
 
   private 
