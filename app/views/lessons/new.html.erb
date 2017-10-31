@@ -2,16 +2,6 @@
 <div class="ui mini form">
 <div id="formbox">
 <%= form_for @lesson do |l| %>
-  <% if @lesson.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @lesson.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
   <div class="field">
     <%= l.label :instrument %>
     <%= l.text_field :instrument %>
@@ -33,7 +23,7 @@
     <%= l.text_field :content %>
   </div>
   </br>
-  <div class="actions" class="ui submit button"><%= l.submit %></div>
+  <div class="actions" class="ui submit button"><%= link_to 'Create Lesson', lessons_path %></div>
 <% end %>
 </div>
 </div>

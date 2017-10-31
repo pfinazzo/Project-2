@@ -13,5 +13,6 @@ class ApplicationController < ActionController::Base
     def current_user_params
       params.require(:current_user).permit(:name, :email, :teacher, :image, :content)
     end
+    
   
 end

@@ -9,16 +9,18 @@ class LessonsController < ApplicationController
   end 
 
   def create
-    @lesson = Lesson.new(user_params)
+    @lesson = Lesson.new(lesson_params)
     if @lesson.save
-      lesson[:user_id] = @lesson.id
-      flash[:notice] = "You have successfully created a new lesson!"
-      redirect_to lesssons_path
+      redirect_to lessons_path
     else
       render :new
     end
   end
 
+private
+
+  def lesson_params 
+    params.require(:lesson).permit(:instrument, :time, :date, :location, :content)
+  end
 
 end
-

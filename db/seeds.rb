@@ -9,7 +9,7 @@
 User.destroy_all
 Lesson.destroy_all
 
-lessons = Lesson.create([{ instrument: 'guitar'}, { time: '3:00 PM'}, {date: '10/02/1994'}, {location: 'panama city'}, {content: "I love cookies"}])
 
+lessons = Lesson.create([{ instrument: 'guitar' }, { date: '10/02/1994' }, { time: '3:00 PM' }, { location: 'panama city' }, { user_id: 2 }])
 
 
