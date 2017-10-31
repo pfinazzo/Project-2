@@ -10,7 +10,7 @@ class LessonsController < ApplicationController
 
   def show 
    @lesson = Lesson.find(params[:id]) 
-   @creator = User.where(user_id: lesson_params[:id])
+  #  @creator = User.where(id: lesson_params[:user_id])
   end 
 
   def new 
@@ -32,7 +32,7 @@ class LessonsController < ApplicationController
 private
 
   def lesson_params 
-    params.require(:lesson).permit(:instructor, :instrument, :time, :date, :location, :content)
+    params.require(:lesson).permit(:instrument, :time, :date, :location, :content)
   end
 
 end

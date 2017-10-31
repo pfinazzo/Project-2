@@ -28,15 +28,6 @@ ActiveRecord::Schema.define(version: 20171031232524) do
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "instrument"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -52,5 +43,4 @@ ActiveRecord::Schema.define(version: 20171031232524) do
   end
 
   add_foreign_key "lessons", "users"
-  add_foreign_key "posts", "users"
 end
