@@ -1,8 +1,15 @@
 <h1>Lessons</h1>
-<ul>
-<% if current_user %>
-<% @lessons.each do |l| %>
-<li><%= l.instrument %><%= l.time %><%= l.date %><%= l.location %></li>
+<% if !current_user.teacher %>
+<ul> 
+<% @lessons %>
+  <% @lessons.each do |l| %>
+  <li><%= "#{l.instrument} #{l.time} #{l.date} #{l.location}"%></li>
 </ul>
 <% end %>
+<% else %>
+<%= link_to 'create a lesson', new_lesson_path %>
 <% end %>
+
+
+
+

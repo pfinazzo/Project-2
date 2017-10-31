@@ -1,4 +1,4 @@
-<div class="center"><h1>Sign Up</h1>
+<div class="center"><h1>Create a lesson</h1>
 <div class="ui mini form">
 <div id="formbox">
 <%= form_for @lesson do |l| %>
@@ -33,7 +33,7 @@
     <%= l.text_field :content %>
   </div>
   </br>
-  <div class="actions" class="ui submit button"><%= f.submit %></div>
+  <div class="actions" class="ui submit button"><%= l.submit %></div>
 <% end %>
 </div>
 </div>

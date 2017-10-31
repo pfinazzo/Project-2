@@ -8,9 +8,17 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new
   end 
 
-  # def show 
-  #   @lesson = Lesso
-  # end
+  def create
+    @lesson = Lesson.new(user_params)
+    if @lesson.save
+      lesson[:user_id] = @lesson.id
+      flash[:notice] = "You have successfully created a new lesson!"
+      redirect_to lesssons_path
+    else
+      render :new
+    end
+  end
+
 
 end
 
