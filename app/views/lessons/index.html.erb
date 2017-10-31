@@ -1,13 +1,13 @@
 <% if current_user.teacher %>
-<h1>Booked Lessons</h1>
+<h2>Booked Lessons</h2>
 <% else%>
 <h1>Lessons</h1>
 <% end %>
 
-<ul> 
+<ul class= "center"> 
   <% @lessons.each do |l| %>
-    <li>
-      <div><%= link_to "#{l.date} #{l.time}", lesson_path(l) %></div>
+    <li class= "pleft">
+      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
     </li>
   <% end %>
 </ul>
