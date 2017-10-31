@@ -1,8 +1,16 @@
 class LessonsController < ApplicationController
 
   def index 
-    @lessons = Lesson.all
+    if current_user.teacher
+      @lessons = current_user.lessons
+    else
+      @lessons = Lesson.all
+    end
   end
+
+  def show 
+   
+  end 
 
   def new 
     @lesson = Lesson.new
@@ -10,6 +18,7 @@ class LessonsController < ApplicationController
 
   def create
     @lesson = Lesson.new(lesson_params)
+    @lesson.user = current_user
     if @lesson.save
       redirect_to lessons_path
     else
