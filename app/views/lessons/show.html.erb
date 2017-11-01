@@ -12,4 +12,7 @@
 <br>
 <br>
 <%= "Reminders: #{@lesson.content}"%>
+<br>
+<br>
+<%=link_to 'Book this lesson', enroll_path(@lesson),method: "patch"%>
    

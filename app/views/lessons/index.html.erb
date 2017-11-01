@@ -1,20 +1,40 @@
 <% if current_user.teacher %>
-<h2>Booked Lessons</h2>
-<% else%>
-<h1>Lessons</h1>
-<% end %>
 
+<h2>Booked Lessons</h2>
 <ul class= "center"> 
-  <% @lessons.each do |l| %>
+  <% @booked_lessons.each do |l| %>
     <li class= "pleft">
       <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
     </li>
   <% end %>
 </ul>
 
+<% else%>
+
+<h1>Lessons</h1>
+<h2>Available</h2>
+<ul class= "center">
+  <% @available_lessons.each do |l| %>
+    <li class= "pleft">
+      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
+    </li>
+  <% end %>
+
+<h2>Booked</h2>
+<ul class= "center">
+  <% @booked_lessons.each do |l| %>
+    <li class= "pleft">
+      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
+    </li>
+  <% end %>
+<% end %>
+
 
 <br>
 <%= link_to 'create a lesson', new_lesson_path if current_user.teacher %>
+
+
+
 
 
 
