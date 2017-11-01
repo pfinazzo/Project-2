@@ -34,6 +34,8 @@ end
   end
  
   def enroll 
+    @lesson = Lesson.find(params[:id])
+    @lesson.update_attributes(student: current_user)
     redirect_to lessons_path
   end
 

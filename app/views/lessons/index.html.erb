@@ -1,4 +1,4 @@
-<% if current_user.teacher %>
+
 
 <h2>Booked Lessons</h2>
 <ul class= "center"> 
@@ -9,7 +9,6 @@
   <% end %>
 </ul>
 
-<% else%>
 
 <h1>Lessons</h1>
 <h2>Available</h2>
@@ -18,21 +17,22 @@
     <li class= "pleft">
       <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
     </li>
-  <% end %>
+<% end %>
 
-<h2>Booked</h2>
+<br>
+<h2 class= "center">Booked</h2>
 <ul class= "center">
-  <% @booked_lessons.each do |l| %>
+  <% current_user.lessons_attending.each do |l| %>
     <li class= "pleft">
       <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
     </li>
   <% end %>
-<% end %>
 
 
+<% if current_user.teacher %>
 <br>
 <%= link_to 'create a lesson', new_lesson_path if current_user.teacher %>
-
+<% end %>
 
 
 

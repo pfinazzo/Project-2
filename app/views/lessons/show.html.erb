@@ -14,5 +14,7 @@
 <%= "Reminders: #{@lesson.content}"%>
 <br>
 <br>
-<%=link_to 'Book this lesson', enroll_path(@lesson),method: "patch"%>
+<% if @lesson.student_id == nil %>
+<%=link_to 'Book this lesson', enroll_path(@lesson), method: "patch"%>
+<% end %>
    
