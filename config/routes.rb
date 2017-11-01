@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :lessons
   patch '/lessons/:id/enroll', to: 'lessons#enroll', as: 'enroll'
-  
+  patch '/lessons/:id/unenroll', to: 'lessons#unenroll', as: 'unenroll'
   
 
   # Create a better looking URL for logging in

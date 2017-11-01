@@ -39,6 +39,11 @@ end
     redirect_to lessons_path
   end
 
+  def unenroll 
+    @lesson = Lesson.find(params[:id])
+    @lesson.update_attributes(student: nil)
+    redirect_to lessons_path
+  end
 private
 
   def lesson_params 
