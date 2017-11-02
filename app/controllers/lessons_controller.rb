@@ -23,7 +23,6 @@ end
   end 
 
   def create
-    # @creator = current_user.name
     @lesson = Lesson.new(lesson_params)
     @lesson.user = current_user
     if @lesson.save
