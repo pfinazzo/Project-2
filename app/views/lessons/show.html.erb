@@ -13,16 +13,22 @@
 <br>
 <%= "Reminders: #{@lesson.content}"%>
 <br>
+
+<% if current_user.teacher == false %>
 <br>
 <%= "Instructor: #{@lesson.user.name}" %>
 <br>
+<% end %>
 <br>
 <% if @lesson.student_id == nil && current_user.teacher == false %>
 <%=link_to 'Book this lesson', enroll_path(@lesson), method: "patch", class: "btn btn-success"%>
 <% end %>
+<% if current_user.teacher == true && @lesson.student_id != nil%>
+<%= "Student: #{@lesson.student.name}" %>
+<br>
+<% end %>
 <br>
 <% if @lesson.student_id != nil%>
-<br>
 <%= link_to 'cancel this lesson', unenroll_path, method: "patch", class: "btn btn-danger"%>
 <% end %>
 <br>

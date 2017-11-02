@@ -4,40 +4,53 @@
 <h1>Lessons</h1>
 <h2>Available</h2>
 <ul class= "center">
+<% if current_user.teacher %>
   <% @available_lessons.each do |l| %>
     <li class= "pleft">
-      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time} - Instructor: #{l.user.name}", lesson_path(l) %></div>
+      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l) %></div>
     </li>
-<% end %>
-
-<br>
-<h2 class= "center" id="booked">Booked</h2>
-<ul class= "center">
-<% if current_user.teacher %>
- <% @booked_lessons.each do |l| %>
- <% if l.user.name == current_user.name %>
+  <% end %>
+<% else %> 
+<% @available_lessons.each do |l| %>
     <li class= "pleft">
       <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time} - Instructor: #{l.user.name}", lesson_path(l) %></div>
     </li>
-  <% end %>
-  <% end %>
-  <% else %>
- <% current_user.lessons_attending.each do |l| %>
-    <li class= "pleft">
-      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time} - Instructor: #{l.user.name}", lesson_path(l) %></div>
-    </li>
-  <% end %>
-  <% end %>
-
-
-<% if current_user.teacher %>
-<br>
-<button class="btn btn-success" id="createlessonbutton"><%= link_to 'create a lesson', new_lesson_path if current_user.teacher %></button>
+    <% end %>
 <% end %>
 
 
+  <br>
+  <h2 class= "center" id="booked">Booked</h2>
+  <ul class= "center">
+    <% if current_user.teacher == true %>
+      <% @booked_lessons.each do |l| %>
+        <li class= "pleft">
+          <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time} - Student : #{l.student.name}", lesson_path(l) %></div>
+        </li>
+        <% end %>
+    <% elsif current_user.teacher == true %>
+    <% @booked_lessons.each do |l| %>
+    <% if l.user.name == current_user.name %>
+        <li class= "pleft">
+          <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time} - Instructor: #{l.user.name}", lesson_path(l) %></div>
+        </li>
+      <% end %>
+      <% end %>
 
-
+    <% else %>
+ 
+    <% current_user.lessons_attending.each do |l| %>
+    <li class= "pleft">
+      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time} - Instructor: #{l.user.name}", lesson_path(l) %></div>
+    </li>
+    <% end %>
+    <% end %>
+   
+    
+    <% if current_user.teacher %>
+    <br>
+    <button class="btn btn-success" id="createlessonbutton"><%= link_to 'create a lesson', new_lesson_path if current_user.teacher %></button>
+    <% end %>
 
 
 
