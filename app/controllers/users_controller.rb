@@ -4,6 +4,14 @@ class UsersController < ApplicationController
     @user = current_user 
   end 
 
+  def teachers 
+    @teachers = User.teachers
+  end
+
+  def students 
+    @students = User.students
+  end
+
   def new
     @user = User.new
   end

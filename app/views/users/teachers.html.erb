@@ -1,0 +1,6 @@
+<h1>Teachers</h1>
+<ul>
+<% @teachers.each do |t| %>
+<li><%= link_to "#{t.name}", profile_path(t), method: "get" %></li>
+<% end %>
+</ul>

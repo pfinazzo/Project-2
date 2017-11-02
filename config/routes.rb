@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   resources :lessons
   patch '/lessons/:id/enroll', to: 'lessons#enroll', as: 'enroll'
   patch '/lessons/:id/unenroll', to: 'lessons#unenroll', as: 'unenroll'
-  
+  get 'users/teachers', to: 'users#teachers', as: 'teachers'
+  get 'users/students', to: 'users#students', as: 'students'
 
   # Create a better looking URL for logging in
   
