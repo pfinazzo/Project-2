@@ -56,3 +56,15 @@
   max-width: 15em;
 }
 
+#content {
+  width: 300px;
+  margin-left: 420px;
+}
+
+#createlessonbutton {
+  margin-right: 80px;
+}
+
+#booked {
+  margin-right: 40px;
+}

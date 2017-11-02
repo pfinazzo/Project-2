@@ -18,15 +18,15 @@
 <br>
 <br>
 <% if @lesson.student_id == nil && current_user.teacher == false %>
-<%=link_to 'Book this lesson', enroll_path(@lesson), method: "patch"%>
+<%=link_to 'Book this lesson', enroll_path(@lesson), method: "patch", class: "btn btn-success"%>
 <% end %>
 <br>
 <% if @lesson.student_id != nil%>
 <br>
-<%= link_to 'cancel a lesson', unenroll_path, method: "patch" %>
+<%= link_to 'cancel this lesson', unenroll_path, method: "patch", class: "btn btn-danger"%>
 <% end %>
 <br>
 <br>
-<%= link_to 'Back to Lessons', lessons_path %>
+<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-success"%>
 
    
