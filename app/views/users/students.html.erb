@@ -2,5 +2,6 @@
 <ul>
 <% @students.each do |s| %>
 <li><%= link_to "#{s.name}", profile_path(s), method: "get" %></li>
-</ul>
+
 <% end %>
+</ul>

@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
-  def show
+  def specialshow
     @user = current_user 
+  end 
+
+  def show 
+   @user = User.find(params[:id])
   end 
 
   def teachers 
@@ -21,7 +25,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "You have successfully signed up!"
-      redirect_to profile_path
+      redirect_to sessions_new_path
     else
       render :new
     end
@@ -38,6 +42,6 @@ class UsersController < ApplicationController
   private 
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :teacher, :image, :content)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :teacher, :image, :content, :user_id)
   end
 end
