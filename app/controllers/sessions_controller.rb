@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
         # notice: is a special flash[:notice] accessor
 
         # TODO: if user.teacher, then redirect to lessons index
-        redirect_to sessions_newgi_path, notice: 'Logged in!'
+        redirect_to sessions_new_path, notice: 'Logged in!'
       else
         # flash.now is used for messaging
         # during the CURRENT request
