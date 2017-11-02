@@ -9,9 +9,22 @@
 <div id="content"><%= @user.content %></div>
 <br>
 <%= "Email me at #{@user.email} "%>
+<h1>Available Lessons</h1>
+<ul class= "center">
+<% if current_user.teacher %>
+  <% @available_lessons.each do |l| %>
+  <% if l.user.name == current_user.name %>
+    <li class= "pleft">
+      <div class= "center"><%= link_to "#{l.instrument} #{l.date} #{l.time}", lesson_path(l), method: "get" %></div>
+    </li>
+    <% end %>
+  <% end %>
+<% end %>
+</ul>
 <br>
 <br>
 <br>
+
 
 <% if @user.teacher == true then %>
 <% if current_user.name == @user.name %>
