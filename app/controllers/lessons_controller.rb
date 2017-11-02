@@ -3,11 +3,11 @@ class LessonsController < ApplicationController
   def index 
     if current_user.teacher
       @lessons = current_user.lessons
-      @booked_lessons = Lesson.all.booked
+      @booked_lessons = User.find(current_user.id).lessons.booked
       @available_lessons = Lesson.all.available
     else
       @lessons = Lesson.all
-      @booked_lessons = Lesson.all.booked
+      @booked_lessons = User.find(current_user.id).lessons.booked
       @available_lessons = Lesson.all.available
   end
 end
