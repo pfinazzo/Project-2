@@ -27,6 +27,19 @@ end
     # @creator = current_user.name
   end 
 
+  def edit
+    @lesson = Lesson.find(params[:id])
+  end
+  
+  def update
+    @lesson = Lesson.find(params[:id])
+    if @lesson.update_attributes(lesson_params)
+      redirect_to lesson_path
+    else
+      render :edit
+    end
+  end
+
   def create
     @lesson = Lesson.new(lesson_params)
     @lesson.user = current_user

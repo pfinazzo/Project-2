@@ -1,0 +1,30 @@
+<br>
+<div class="center"><h1>Create a lesson</h1>
+<div class="ui mini form">
+<div id="formbox">
+<%= form_for @lesson do |l| %>
+  <div class="field">
+    <%= l.label :instrument %>
+    <%= l.text_field :instrument %>
+  </div>
+  <div class="field">
+    <%= l.label :time %>
+    <%= l.text_field :time %>
+  </div>
+  <div class="field">
+    <%= l.label :date %>
+    <%= l.text_field :date %>
+  </div>
+  <div class="field">
+    <%= l.label :location %>
+    <%= l.text_field :location %>
+  </div>
+    <div class="field">
+    <%= l.label :content %>
+    <%= l.text_field :content %>
+  </div>
+  </br>
+  <%= l.submit class: "btn btn-success" %>
+<% end %>
+</div>
+</div>

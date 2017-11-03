@@ -26,15 +26,20 @@
 <% if current_user.teacher == true && @lesson.student_id != nil%>
 <%= "Student: #{@lesson.student.name}" %>
 <br>
+<%= link_to 'delete this lesson', delete_path, method: "delete", class: "btn btn-danger"%>
+<%= link_to 'Edit this lesson', edit_lesson_path, method: "get", class: "btn btn-danger" %>
 <% end %>
 <br>
 <% if @lesson.student_id != nil%>
 <%= link_to 'cancel this lesson', unenroll_path, method: "patch", class: "btn btn-danger"%>
-<%= link_to 'delete this lesson', delete_path, method: "delete", class: "btn btn-danger"%>
 <% end %>
 <br>
 <br>
 <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-success"%>
+<% if current_user.teacher %>
 <%= link_to 'delete this lesson', delete_path, method: "delete", class: "btn btn-danger"%>
+<%= link_to 'Edit this lesson', edit_lesson_path, method: "get", class: "btn btn-danger" %>
+<% end %>
+
 
    
