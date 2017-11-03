@@ -16,4 +16,9 @@ application up and running.
 
 * Any other commands we want to run on the Heroku service will remain the same commands as normal, only difference is that they will start with the words "Heroku run". (I.E. "Heroku run rails db:seed" etc.)
 
+* Deployed app - https://secret-plateau-53896.herokuapp.com/
+
+* Planning board - 
+https://trello.com/b/f2cbzipB/wdi-project-2
+
 
