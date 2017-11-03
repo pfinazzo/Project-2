@@ -1,4 +1,9 @@
 # Music Mate (Musician Match)
+
+* Description - This is an application made for connecting musicians. As a user you will sign up as either a teacher or a student, which will then give you different permissions for creating and booking lessons. A teacher can create a lesson and edit and delete a lesson, but they cannot book one. A student can book a lesson, or unbook a lesson. The main point of this application is to create a simple interface for booking lessons with local teachers, or to provide musicians with a way of employing themselves as a teacher. 
+
+* Technologies used - HTML, CSS, jQuery, Bootstrap, Semantic UI, Ruby on Rails
+
 Steps necessary to get the
 application up and running.
 
