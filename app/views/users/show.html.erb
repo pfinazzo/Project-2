@@ -26,24 +26,24 @@
 
 <% if @user.teacher == true then %>
 <% if current_user.name == @user.name %>
-<button class="btn btn-success"><%= link_to "Book/View Lessons!", lessons_path %></button>
+<%= link_to "Book/View Lessons!", lessons_path, class: "btn btn-success"%>
 <br>
 <br>
-<button class="btn btn-success"><%= link_to "Create a lesson!", new_lesson_path %></button>
+<%= link_to "Create a lesson!", new_lesson_path, class: "btn btn-success" %>
 <br>
 <br>
-<button class="btn btn-success"><%= link_to "Back to teachers!", teachers_path %></button>
+<%= link_to "Back to teachers!", teachers_path, class: "btn btn-success" %>
 <br>
 <br>
 <% else %>
-<button class="btn btn-success"><%= link_to "Back to teachers!", teachers_path %></button>
+<%= link_to "Back to teachers!", teachers_path, class: "btn btn-success" %><
 <% end %>
 
 <% else %>
 <% if current_user.name == @user.name %>
-<button class="btn btn-success"><%= link_to "Book/View Lessons!", lessons_path %></button>
+<%= link_to "Book/View Lessons!", lessons_path, class: "btn btn-success" %>
 <% else %>
-<button class="btn btn-success"><%= link_to "Back to students!", students_path %></button>
+<%= link_to "Back to students!", students_path, class: "btn btn-success" %>
 <% end %>
 <br>
 <br>

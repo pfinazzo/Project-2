@@ -48,7 +48,7 @@
     
     <% if current_user.teacher %>
     <br>
-    <button class="btn btn-success" id="createlessonbutton"><%= link_to 'create a lesson', new_lesson_path if current_user.teacher %></button>
+    <%= link_to 'create a lesson', new_lesson_path , class: "btn btn-success", id: "createlessonbutton" if current_user.teacher %>
     <% end %>
 
 

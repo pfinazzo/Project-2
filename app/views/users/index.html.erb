@@ -6,7 +6,7 @@
 <% unless current_user.nil?%>
 <% unless u.email == current_user.email%>
 <li><%="  #{u.name} " %><%= "  #{u.email} " %> <% if u.teacher == true %> <% return %> <%= "Teacher" %> <% else %><%= "Student"%> <% end %>
-<%= link_to "Delete", user_path(u), :method => :delete %>
+<%= link_to "Delete", user_path(u), :method => :delete, class: "btn btn-danger" %>
 <% end %>
 <% end %>
 <% end %>
