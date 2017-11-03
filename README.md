@@ -7,7 +7,7 @@ application up and running.
 
 * Also make sure you have dowloaded and installed Rails 5. I am using version 5.1.4.
 
-* In order to run this site locally first you must clone and download this repo. After that cd into the directory of MusicMate. Then once you have made MusicMate the current directory, open up a new terminal windown in the same current directory, and run the command "$ rails s" in order to start the rails server.  Once Puma is up and running in the terminal, open up your browser and travel to localhost:3000 in the address bar. This will pull up the homepage at which point the application may be used. 
+* In order to run this site locally first you must clone and download this repo. After that cd into the directory of MusicMate. Then once you have made MusicMate the current directory, open up a new terminal windown in the same current directory, and run the command "$ bundle install", which will make sure all of our gems (such as paperclip) have been installed and so that they will run. Next run the command "$ rails s" in order to start the rails server.  Once Puma is up and running in the terminal, open up your browser and travel to localhost:3000 in the address bar. This will pull up the homepage at which point the application may be used. 
 
 
 * To reinitialize the database, simply type "$ rails db:seed" in the terminal. This will destroy all Users and all child elements(lessons) of users.
