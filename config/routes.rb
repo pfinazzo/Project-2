@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/profile/:id', to: 'users#show', as: 'profile'
   get '/profile/edit', to: 'users#edit'
   patch '/profile', to: 'users#update'
+  delete '/lesson/:id', to: 'lessons#destroy', as: 'delete'
 
   resources :lessons
   patch '/lessons/:id/enroll', to: 'lessons#enroll', as: 'enroll'

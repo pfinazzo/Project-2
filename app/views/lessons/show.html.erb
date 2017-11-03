@@ -30,9 +30,11 @@
 <br>
 <% if @lesson.student_id != nil%>
 <%= link_to 'cancel this lesson', unenroll_path, method: "patch", class: "btn btn-danger"%>
+<%= link_to 'delete this lesson', delete_path, method: "delete", class: "btn btn-danger"%>
 <% end %>
 <br>
 <br>
 <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-success"%>
+<%= link_to 'delete this lesson', delete_path, method: "delete", class: "btn btn-danger"%>
 
    

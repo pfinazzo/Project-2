@@ -12,6 +12,11 @@ class LessonsController < ApplicationController
   end
 end
 
+def destroy 
+  @lesson = Lesson.find(params[:id]).destroy
+  redirect_to lessons_path
+end
+
   def show 
    @lesson = Lesson.find(params[:id]) 
   #  @creator = User.where(id: lesson_params[:user_id])
