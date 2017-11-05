@@ -25,9 +25,8 @@
     <div class="center">
     <p>
       <% if current_user %>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         Welcome, <%= current_user.name %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log Out', new_session_path, method: :delete %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Profile', sessions_new_path %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -36,10 +35,13 @@
         <%= link_to 'Students', students_path %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Teachers', teachers_path %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'Log Out', new_session_path, method: :delete %>
       <% else %>
         <%= link_to 'Log In', login_path %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Sign Up', new_user_path %>
+        </nav>
         
       <% end %>
     </p>
