@@ -23,8 +23,7 @@
 ![Alt Text](https://imgur.com/0IZgqf5.png)
 
 
-Steps necessary to get the
-application up and running.
+# Steps necessary to get the application up and running.
 
 
 * First make sure you have ruby version 2 downloaded. I am using version 2.2.3
