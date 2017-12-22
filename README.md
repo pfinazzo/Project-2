@@ -4,18 +4,23 @@
 
 * Technologies used - HTML, CSS, jQuery, Bootstrap, Semantic UI, Ruby on Rails
 
-![Alt Text](https://i.imgur.com/TNJ30yv.jpg)
-![Alt Text](https://i.imgur.com/TyAeSqU.jpg)
-![Alt Text](https://i.imgur.com/lCTSAR5.jpg)
-![Alt Text](https://i.imgur.com/Vl7geyq.jpg)
-![Alt Text](https://i.imgur.com/eUUCzSj.jpg)
-![Alt Text](https://i.imgur.com/oY0Np4j.jpg)
-![Alt Text](https://i.imgur.com/ofw9kd4.jpg)
-![Alt Text](https://i.imgur.com/oY0Np4j.jpg)
-![Alt Text](https://i.imgur.com/kM26d6u.jpg)
-![Alt Text](https://i.imgur.com/dyrK8cV.jpg)
-![Alt Text](https://i.imgur.com/TyAeSqU.jpg)
-![Alt Text](https://i.imgur.com/bpFcAis.jpg)
+![Alt Text](https://imgur.com/RgtywUT.png)
+![Alt Text](https://imgur.com/VTz195M.png)
+![Alt Text](https://imgur.com/XkawHlu.png)
+![Alt Text](https://imgur.com/joWkMJU.png)
+![Alt Text](https://imgur.com/cgFKIK7.png)
+![Alt Text](https://imgur.com/xeGTAEw.png)
+![Alt Text](https://imgur.com/974GGtO.png)
+![Alt Text](https://imgur.com/VL2qqDr.png)
+![Alt Text](https://imgur.com/7udmtEK.png)
+![Alt Text](https://imgur.com/jKA0IDv.png)
+![Alt Text](https://imgur.com/p5Qhowf.png)
+![Alt Text](https://imgur.com/cYFvd9o.png)
+![Alt Text](https://imgur.com/2UdZlxB.png)
+![Alt Text](https://imgur.com/4NuQlW2.png)
+![Alt Text](https://imgur.com/WAz00rU.png)
+![Alt Text](https://imgur.com/s9lAUzk.png)
+![Alt Text](https://imgur.com/0IZgqf5.png)
 
 
 Steps necessary to get the
