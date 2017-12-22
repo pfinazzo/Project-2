@@ -1,4 +1,4 @@
-# Music Mate (Musician Match)
+# Musician Match
 
 * Description - This is an application made for connecting musicians. As a user you will sign up as either a teacher or a student, which will then give you different permissions for creating and booking lessons. A teacher can create a lesson and edit and delete a lesson, but they cannot book one. A student can book a lesson, or unbook a lesson. The main point of this application is to create a simple interface for booking lessons with local teachers, or to provide musicians with a way of employing themselves as a teacher. 
 
@@ -35,7 +35,9 @@ application up and running.
 
 * Any other commands we want to run on the Heroku service will remain the same commands as normal, only difference is that they will start with the words "Heroku run". (I.E. "Heroku run rails db:seed" etc.)
 
-* Deployed app - https://secret-plateau-53896.herokuapp.com/
+* Deployed app - https://musicianmatch.herokuapp.com/
+
+* To test out teachers and students functionality login with "teacher1@teacher1" as the email and "teacher1" as the password for teacher functionality, and for student functionality use "student1@student1" for the email and "student1" for the password
 
 * Planning board - 
 https://trello.com/b/f2cbzipB/wdi-project-2

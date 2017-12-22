@@ -23,6 +23,9 @@
  margin-top: 25px;
  }
 
+.field {
+  color: white;
+}
 #submitbutton {
   margin-bottom: 30px;
 }

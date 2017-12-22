@@ -25,7 +25,6 @@
     <div class="center">
     <p>
       <% if current_user %>
-      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         Welcome, <%= current_user.name %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Profile', sessions_new_path %>
@@ -41,8 +40,6 @@
         <%= link_to 'Log In', login_path %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Sign Up', new_user_path %>
-        </nav>
-        
       <% end %>
     </p>
     <%= yield %>
